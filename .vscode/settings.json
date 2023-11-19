@@ -1,0 +1,24 @@
+{
+  "files.associations": {
+    "*.ttss": "css",
+    "*.wxss": "css",
+    "*.sjs": "javascript",
+    "*.ttml": "ttml",
+    "*.wxml": "ttml",
+    "*.sk": "ttml",
+    "*.c": "c",
+    "string.h": "c",
+    "quickjs.h": "c",
+    "quickjs-debugger-ipc.h": "c",
+    "emscripten.h": "c",
+    "bitset": "c",
+    "__locale": "c",
+    "locale": "c",
+    "console.h": "c",
+    "sstream": "c",
+    "chrono": "c",
+    "algorithm": "c",
+    "__bit_reference": "c",
+    "unordered_map": "c"
+  }
+}
