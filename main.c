@@ -23,19 +23,7 @@
 
 #define EXTERN_C
 
-typedef void (*CallbackFunc)(const char *str);
-
-void post_message(const char *str, JSContext *ctx) { request(str, ctx); }
-
-
-EM_PORT_API(void)
-js_post_message(const char *str, JSContext *ctx)
-{
-  JSDebuggerInfo *info = js_debugger_info(JS_GetRuntime(ctx));
-  info->message_buffer = (char *)str;
-  info->message_buffer_length = strlen(str);
-  info->buffer_is_full = 1;
-}
+void post_message(JSContext *ctx, const char *str) { cPostMessage(ctx, str); }
 
 // 导出 api 供 js 调用
 EM_PORT_API(const char *)
@@ -50,7 +38,6 @@ eval(const char *str)
   // 在此上下文中eval 执行js 代码
   JSValue result =
       JS_Eval(ctx, str, strlen(str), "d:\\hub\\quickjs\\test2.js", JS_EVAL_TYPE_GLOBAL);
-  // post_message(str, ctx);
 
   // 异常情况
   if (JS_IsException(result))

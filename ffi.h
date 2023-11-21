@@ -1,6 +1,5 @@
 #include "quickjs/quickjs.h"
-extern const char *request(const char *str, JSContext *ctx);
 
-extern void js_log(const char *str);
+extern const char *cPostMessage(JSContext *ctx, const char *str);
 
-void post_message(const char *str, JSContext *ctx);
+void post_message(JSContext *ctx, const char *str);

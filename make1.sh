@@ -19,14 +19,12 @@ emcc \
   -sIGNORE_MISSING_MAIN=0 \
   -fdebug-compilation-dir='.' \
   --no-entry \
+  -sINITIAL_MEMORY=512557056 \
   -sASYNCIFY_STACK_SIZE=24576 \
-  -sASYNCIFY_IMPORTS=do_wait \
+  -sASYNCIFY_IMPORTS=do_wait,js_transport_read_fully \
   -sAUTO_JS_LIBRARIES=0 \
-  -sSAFE_HEAP=1 \
   -lwebsocket.js \
   -sASYNCIFY \
-  -sALLOW_TABLE_GROWTH  \
-  -sASSERTIONS \
   -sAUTO_NATIVE_LIBRARIES=0 \
   -sAUTO_ARCHIVE_INDEXES=0 \
   -sDEFAULT_TO_CXX=0 \

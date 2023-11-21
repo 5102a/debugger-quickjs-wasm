@@ -19,6 +19,11 @@
     "chrono": "c",
     "algorithm": "c",
     "__bit_reference": "c",
-    "unordered_map": "c"
+    "unordered_map": "c",
+    "random": "c",
+    "queue": "c",
+    "stack": "c",
+    "functional": "c",
+    "cmath": "c"
   }
 }

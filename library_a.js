@@ -1,11 +1,8 @@
 
 mergeInto(LibraryManager.library, {
-  request: function (str, ctx) {
+  cPostMessage: function (ctx, str) {
     if (globalThis.onDebuggerMessage) {
-      globalThis.onDebuggerMessage(UTF8ToString(str), ctx)
+      globalThis.onDebuggerMessage(ctx, UTF8ToString(str))
     }
-  },
-  js_log: function (str) {
-    console.log('js_log:', str);
   },
 });
