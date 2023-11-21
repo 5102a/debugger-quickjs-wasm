@@ -51,5 +51,8 @@ eval(const char *str)
   // 释放内存
   JS_FreeValue(ctx, result);
 
+  JS_FreeContext(ctx);
+  JS_FreeRuntime(runtime);
+
   return JS_ToCString(ctx, json);
 }
