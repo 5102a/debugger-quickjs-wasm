@@ -37,7 +37,7 @@ eval(const char *str)
 
   // 在此上下文中eval 执行js 代码
   JSValue result =
-      JS_Eval(ctx, str, strlen(str), "d:\\hub\\quickjs\\test2.js", JS_EVAL_TYPE_GLOBAL);
+      JS_Eval(ctx, str, strlen(str), "index.js", JS_EVAL_TYPE_GLOBAL);
 
   // 异常情况
   if (JS_IsException(result))
